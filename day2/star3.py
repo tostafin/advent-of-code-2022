@@ -24,7 +24,8 @@ def get_result_points(result: List[str]) -> int:
         case ["C", "Z"]:
             return 3 + 3
 
-    raise ValueError(f"Wrong list values: {result}.")
+        case _:
+            raise ValueError(f"Wrong list values: {result}.")
 
 
 with open("input", "r") as rps_scores:
