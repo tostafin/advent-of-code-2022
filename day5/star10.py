@@ -8,8 +8,7 @@ with open("input", "r") as crates_input:
     num_of_stacks: Final[int] = int(crates[-1])
     stacks: List[List[str]] = [[] for _ in range(num_of_stacks)]
     crates_rows: List[str] = crates.split("\n")
-    crates_rows.reverse()
-    for crate in crates_rows:
+    for crate in reversed(crates_rows):
         for i in range(1, len(crate), 4):
             if crate[i].isupper():
                 stacks[i // 4].append(crate[i])
